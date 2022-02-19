@@ -12,7 +12,7 @@ export async function findAllGames(){
 *
 export async function findAllGamesByFilter(filter){
     nullChecker(filter, 'filter')
-    return await requestHandler(`${GAME_RESOURCE}?filter=${filter}`, METHODS.GET);
+    return await requestHandler(`${GAME_RESOURCE}?filter=${filter}`, ENUMS.METHODS.GET);
 }
 */
 
@@ -49,7 +49,7 @@ export async function CreateGame(title, developer, platform, rating, releaseDate
  */
 export async function updateGame(gameId){
     nullChecker(gameId, 'gameId')
-   // return await requestHandler(`${GAME_RESOURCE}/${gameId}`, METHODS.PUT);
+   // return await requestHandler(`${GAME_RESOURCE}/${gameId}`, ENUMS.METHODS.PUT);
     
 }
 

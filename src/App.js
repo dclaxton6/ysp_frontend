@@ -4,14 +4,17 @@ import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { findAllGames, findAllGamesById } from './api/game.api.js'
 
- function App() {
-   findAllGamesById(5).then(response => console.log(response)).catch( (error) => console.log(error))
+async function App() {
+  
+}
+
+function tableTest(){
+  let test = await findAllGamesById(5).then((response) => { return response })
+
   return (
    
   <div>
-    
-
-    {/*
+  
   <style>{`
   .button1{
     //color: purple;
@@ -41,7 +44,7 @@ import { findAllGames, findAllGamesById } from './api/game.api.js'
       <thead>
       <tr>
           <th scope="col">#</th>
-          <th scope="col">Title</th>
+          <th scope="col"></th>
           <th scope="col">Platform</th>
           <th scope="col">Rating</th>
           <th scope="col">Developer</th>
@@ -54,7 +57,7 @@ import { findAllGames, findAllGamesById } from './api/game.api.js'
       <tbody>
       <tr>
           <th scope="row">1</th>
-          <td>findAllGames(1);</td>
+          <td>GTA</td>
           <td>PC</td>
           <td>M</td>
           <td>Rockstar</td>
@@ -116,10 +119,8 @@ import { findAllGames, findAllGamesById } from './api/game.api.js'
       </tbody>
   </table>
 
-*/}
 
 </div>
   );
 }
-
 export default App;

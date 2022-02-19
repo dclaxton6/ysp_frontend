@@ -1,16 +1,16 @@
-import {BASE_URL} from './api.config.json'
+import CONFIG from './api.config.json'
 import { requestHandler } from './axiosHandler'
-import {METHODS} from './enums.json'
+import ENUMS from './enums.json'
 import { nullChecker } from '../common/checkers'
-const REVIEW_RESOURCE = `${BASE_URL}/api/v1/critic-reviews`
+const REVIEW_RESOURCE = `${CONFIG.BASE_URL}/api/v1/critic-reviews`
 
 export async function findAllReviews(){
-    return await requestHandler(REVIEW_RESOURCE, METHODS.GET);
+    return await requestHandler(REVIEW_RESOURCE, ENUMS.METHODS.GET);
 }
 
 export async function findAllReviewsById(){
     nullChecker(reviewId, 'reviewId')
-    return await requestHandler(REVIEW_RESOURCE, METHODS.GET);
+    return await requestHandler(REVIEW_RESOURCE, ENUMS.METHODS.GET);
 }
 
 /*
@@ -18,7 +18,7 @@ export async function findAllReviewsById(){
 *
 export async function findAllReviewsByFilter(filter){
     nullChecker(filter, 'filter')
-    return await requestHandler(`${REVIEW_RESOURCE}?filter=${filter}`, METHODS.GET);
+    return await requestHandler(`${REVIEW_RESOURCE}?filter=${filter}`, ENUMS.METHODS.GET);
 }
 */
 
@@ -34,7 +34,7 @@ export async function submitReview(gameId, publication, review, reviewDate){
     review=${review}
     reviewDate=${reviewDate}`;
     /*score=${score}`;  modify controller and service class to include this value */
-    return await requestHandler(endpoint, METHODS.POST);  
+    return await requestHandler(endpoint, ENUMS.METHODS.POST);  
 }
 
 /**
@@ -44,12 +44,12 @@ export async function submitReview(gameId, publication, review, reviewDate){
  */
 export async function updateReview(reviewId){
     nullChecker(reviewId, 'reviewId')
-   // return await requestHandler(`${REVIEW_RESOURCE}/${reviewId}`, METHODS.PUT);
+   // return await requestHandler(`${REVIEW_RESOURCE}/${reviewId}`, ENUMS.METHODS.PUT);
     
 }
 
 export async function deleteGame(reviewId){
     nullChecker(reviewId, 'reviewId')
-    return await requestHandler(`${REVIEW_RESOURCE}/${reviewId}`, METHODS.DELETE);
+    return await requestHandler(`${REVIEW_RESOURCE}/${reviewId}`, ENUMS.METHODS.DELETE);
     
 }
