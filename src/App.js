@@ -1,19 +1,102 @@
-import logo from './logo.svg';
 import './App.css';
-import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { findAllGames, findAllGamesById } from './api/game.api.js'
+//import { findAllGames, findAllGamesById } from './api/game.api.js'
+/* import {
+   useState,
+    useEffect,
+     //useReducer 
+    } from 'react'; */
+import Webpages from './views/webPages';
 
-async function App() {
-  
+const styles = {
+  center: {
+    marginLeft: "auto",
+    marginRight: "auto"
+  }
 }
 
-function tableTest(){
-  let test = await findAllGamesById(5).then((response) => { return response })
+function App(){
+  /* const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [data, setData] = useState([]);
+console.log(data)
+  useEffect(() => {
+    findAllGames().then(res => res.data)
+    .then(
+        (data) => {
+            
+            setIsLoaded(true);
+            setError(error);
+            setData(data);
+        }
+    )
+  }, []) */
 
-  return (
+return(
+<div>
+  <Webpages />
+</div>
+);
+
+{/*
+  if(error){
+    return <div>Error: {error.message}</div>;
+  } else if (!isLoaded){
+    return <div style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginTop: '200px',
+  }}><h1>Loading...</h1></div>;
+  } else {
+      return(
+        <reactRouter.BrowserRouter>
+          <reactRouter.Router exact path="/" component={GameInfo}/>
+        </reactRouter.BrowserRouter>
+       <div>
+        <h5 style={{float:"left"}}>Game Info</h5>
+
+  <table class="table table-striped table-dark table-bordered table-hover">
+      <thead>
+      <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Platform</th>
+          <th scope="col">Rating</th>
+          <th scope="col">Developer</th>
+          <th scope="col">Summary</th>
+          <th scope="col" >Release Date</th>
+          <th scope="col">Score</th>
+
+      </tr>
+      </thead>
+      <tbody>
+        {data.map( data => (
+          <tr>
+            <th key={data.id}scope="row">{data.id}</th>
+            <td>{data.title}</td>
+            <td>{data.platform}</td>
+            <td>{data.rating}</td>
+            <td>{data.developer}</td>
+            <td>{data.summary}</td>
+            <td>{data.releaseDate}</td>
+            <td>{data.score}</td>
+          </tr>
+        ))}
+      
+      </tbody>
+  </table>
+  </div>
+      )
+  }
+}
+
+//function tableTest(){
+  //let test = await findAllGamesById(5).then((response) => { return response })
+
+  //return (
    
-  <div>
+   <div>
   
   <style>{`
   .button1{
@@ -121,6 +204,7 @@ function tableTest(){
 
 
 </div>
-  );
+*/}
+  //); 
 }
 export default App;

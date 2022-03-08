@@ -1,0 +1,180 @@
+.App {
+    text-align: center;
+  }
+
+  .new-release{
+      
+      
+  }
+
+  .release-table{
+      border-color: #ccc;
+     
+  }
+
+  .browse-platform{
+      font-weight: bold;
+      font-size: 14px;
+      border-color: #ccc;
+      float:right;
+      
+  }
+  h1, h2, .h1style{
+    font-family: 'Oswald',"HelveticaNeue-Light",
+    "Helvetica Neue Light","Helvetica Neue",
+    Helvetica,Arial,sans-serif;}
+.borders{
+    border-color: black;
+      border-style: solid;
+}
+.fontBold{ font-weight: bold;}
+.paddingZero{
+  padding: 0%;
+}
+  .genre-label{
+    font-size: medium;
+    font-weight: bold;
+    padding: 0 19px 7px;
+  }
+
+  .browse-genre{
+    border-color: #ccc;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 20px;
+    
+      float: right;
+  }
+  .browse-genre li{
+    color: #666;
+    font-weight: bold;
+    font-size: smaller;
+  }
+
+   li:hover{
+    color: #FEE179;
+  }
+
+  .top-game-label{
+    color:#fff;
+    background-color: black;
+    font-size: 16px;
+}
+
+.content-body{
+  margin-left: 0;
+  padding-right: 20px;
+}
+
+.new-game-label{
+  color:#fff;
+  background-color: black;
+  font-size: 16px;
+ 
+  padding-right: 0;
+  margin-right: -16px;
+  margin-left: -24px;
+  padding-left: 12px;
+}
+  .score-wrap{
+    float: right;
+  }
+  .score{
+    width: 2em;
+    height:2em;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+  }
+ul{
+  list-style: none;
+}
+  .game_positive{
+      background-color: #6c3;
+  }
+
+  .platform{
+    float: left;
+    margin: 0 -50% 0 0;
+    padding: 6px 50% 6px 0;
+    width: 50%;
+    list-style: none;
+    border-top-color: #ccc;
+    border-top-style: solid;
+    
+  }
+
+  .platform-alt{
+      margin-top: 1px;
+      float:right;
+      margin-left: 100px;
+      
+}
+
+.content-nav li{
+  background-color:#333333 ;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 1px;
+  padding: 6px 0;
+}
+
+.content-nav li:hover{
+  color: #FEE179;
+}
+
+.summary-details{
+  font-size: .9rem;
+}
+
+.social-links li{
+ margin-right: 3px;
+ 
+}
+.social-links li{
+  height: 32px;
+  width: 32px;
+}
+
+.facebook-icon{
+  color: #3b5998; 
+  height: 32px;
+  width: 32px;
+ }
+
+ .twitter-icon{
+   color: #55acee;
+   height: 32px;
+   width: 32px;
+ }
+
+ .reddit-icon{
+  color: #ff8750;
+  height: 32px;
+  width: 32px;
+}
+
+.pintrest-icon{
+  color: #bd0000;
+  height: 32px;
+  width: 32px;
+}
+
+.floatLeft{
+    float: left;
+}
+.floatRight{
+    float: right;
+}
+.m-right{
+  margin-right: 14px;
+}
+.p-left-zero{
+  padding-left: 0;
+}
+
+.footer{
+  background-color: #424242;
+}

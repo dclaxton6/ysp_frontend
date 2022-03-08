@@ -7,19 +7,16 @@ const GAME_RESOURCE = `${CONFIG.BASE_URL}/api/v1/game`
 export async function findAllGames(){
     return await requestHandler(GAME_RESOURCE, ENUMS.METHODS.GET);
 }
-/*
-*TODO need to add endpoint to backend for filter search
-*
+
 export async function findAllGamesByFilter(filter){
     nullChecker(filter, 'filter')
-    return await requestHandler(`${GAME_RESOURCE}?filter=${filter}`, ENUMS.METHODS.GET);
+    return await requestHandler(`${GAME_RESOURCE}/${filter}`, ENUMS.METHODS.GET);
 }
-*/
 
-export async function findAllGamesById(gameId){
+export async function findGameById(gameId){
     nullChecker(gameId, 'gameId')
+    console.log(gameId)
     return await requestHandler(`${GAME_RESOURCE}/${gameId}`, ENUMS.METHODS.GET);
-    
 }
 
 export async function CreateGame(title, developer, platform, rating, releaseDate, summary, score){
@@ -30,18 +27,21 @@ export async function CreateGame(title, developer, platform, rating, releaseDate
     nullChecker(releaseDate, 'releaseDate')
     nullChecker(summary, 'summary')
     nullChecker(score, 'score')
-
-    let endpoint = `${GAME_RESOURCE}/new?
-    title=${title}
-    developer=${developer}
-    platform=${platform}
-    rating=${rating}
-    releaseDate=${releaseDate}
-    summary=${summary}
-    score=${score}`;
-    return await requestHandler(endpoint, ENUMS.METHODS.POST);
     
+    const data = {
+        title,
+        developer,
+        platform,
+        rating,
+        releaseDate,
+        summary,
+        score
+    }
+
+    let endpoint = `${GAME_RESOURCE}/new`;
+    return await requestHandler(endpoint, ENUMS.METHODS.POST,{data});
 }
+
 /**
  * 
  * @param {*} gameId 
@@ -56,5 +56,12 @@ export async function updateGame(gameId){
 export async function deleteGame(gameId){
     nullChecker(gameId, 'gameId')
     return await requestHandler(`${GAME_RESOURCE}/${gameId}`, ENUMS.METHODS.DELETE);
-    
+}
+
+export async function findAllPlatforms(){
+    return await requestHandler(`${CONFIG.BASE_URL}/api/v1/platform`,ENUMS.METHODS.GET)
+}
+
+export async function findAllGenres(){
+ return await requestHandler(`${CONFIG.BASE_URL}/api/v1/game/genre`,ENUMS.METHODS.GET)
 }
