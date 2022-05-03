@@ -19,7 +19,12 @@
       float:right;
       
   }
-  h1, h2, .h1style{
+
+  .browse-platform span{
+    border-bottom: #3b5998;
+  }
+
+  h1, h2, .h1 style{
     font-family: 'Oswald',"HelveticaNeue-Light",
     "Helvetica Neue Light","Helvetica Neue",
     Helvetica,Arial,sans-serif;}
@@ -51,14 +56,16 @@
     font-size: smaller;
   }
 
-   li:hover{
+   a:hover{
     color: #FEE179;
   }
 
-  .top-game-label{
-    color:#fff;
-    background-color: black;
-    font-size: 16px;
+  a{
+    text-decoration: none;
+    color: #ccc;
+  }
+.providers a{
+  color: #5d5d5d;
 }
 
 .content-body{
@@ -70,7 +77,8 @@
   color:#fff;
   background-color: black;
   font-size: 16px;
- 
+  font-family: "Oswald","HelveticaNeue-Light",
+  "Helvetica Neue Light","Helvetica Neue";
   padding-right: 0;
   margin-right: -16px;
   margin-left: -24px;
@@ -177,4 +185,5 @@ ul{
 
 .footer{
   background-color: #424242;
+  color: #ccc;
 }

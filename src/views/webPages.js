@@ -10,7 +10,9 @@ import GameInfo from "./gameInfo";
 import GameMain from "./gameMain";
 
 const Webpages = () => {
+    console.log("test 4");
     return(
+        
         <Router>
             <Routes>
                 <Route exact path="/" element={<GameMain/>} />

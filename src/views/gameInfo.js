@@ -38,11 +38,9 @@ const GameInfo = () => {
   }}><h1>Loading...</h1></div>;
   } else {
       return(
-        <div className="container ML-2 col-10">
-            <div>Lorem ipsum dolor sit.</div>
+        <div className="container ML-2 mt-5 col-10">
                 <div className="row">
-                    <div className="col-3"><a> <h1>{game.title}</h1> </a></div>
-                        
+                    <div className="col-3"><a> <h2>{game.title}</h2> </a> </div>
                     <div className="col-2">  
                         <span>{game.platform}</span>
                     </div>
@@ -57,9 +55,11 @@ const GameInfo = () => {
                     </div>
                 </div>
                 <div className="row summary-details">
-                    <div className="col-3">{game.developer}</div>
-                    <div className="col-3"><span>Release Date:</span>{game.releaseDate}</div>
-                    <div className="col-3">Also On:</div>
+                    <div><a href="" className="fw-bold text-dark">{game.developer}</a>  <span> | </span>
+                   
+                    <span className="fw-bold">Release Date: </span>{game.releaseDate} <span> | </span> 
+                    
+                    <span className="fw-bold">Also On: </span> </div>
                 </div>
                 <div className="row">
                     <ul className="content-nav list-group list-group-horizontal col-10">
@@ -71,71 +71,6 @@ const GameInfo = () => {
                     </ul>
                 </div>
         </div>
-
-/*
-           <div className="header">
-               
-                <div className="platform_title row">
-                    <a> <h1 className="col-1">Horizon</h1> </a>
-                    
-                    <span>Platform</span>
-                    
-                    <div className="SocialLinks col-3">Tews</div>
-                </div>
-                
-                <ul>
-                    <li><a>PlayStation Studios</a></li>
-                    <li>Release Date: {}</li>
-                    <li> Also On:<a>{}</a></li>
-                </ul>
-            </div>
-            <div className="content_nav">
-                <ul className="content_nav_items">
-                    <li></li>
-                </ul>
-            </div>
-            <div className="content_body">
-                <div>
-                    <img />
-                </div>
-                
-                <div>
-                    <span className="score">88</span>
-                    <span>
-                        Generally favorable reviews based on
-                         <span>
-                             106 Critic Reviews
-                        </span>
-                    </span>
-                    <div className="content_summary">
-                        <span>summary</span>
-                    </div>
-                    <div className="side-details">
-                        <ul>
-                            <li>Developer</li>
-                            <li>Genre(s):</li>
-                            <li># of players:</li>
-                            <li>Rating:</li>
-                            <li><a>More Details and Credits</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div className="critic_user_reviews">
-                <div className="critic_reviews">
-                    <div className="review_header">
-                        <h2>Critic Reviews</h2>
-                    </div>
-                </div>
-
-                <div className="critic_reviews">
-                    <div className="review_header">
-                        <h2>User Reviews</h2>
-                    </div>
-                </div>
-            </div>
-           
-        </div> */
         ); 
     }
 }
